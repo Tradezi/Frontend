@@ -11,7 +11,7 @@ function App() {
     <Router>
         <Sidebar />
         <Switch>
-            <Route path="/"  exact component={Portfolio} />
+            <Route path="/portfolio"  exact component={Portfolio} />
             <Route path="/stocks" component={Stocks} />
         </Switch>
     </Router>

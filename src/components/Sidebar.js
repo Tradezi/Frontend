@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { SidebarData } from "./SidebarData"
 import "./Sidebar.css" 
 import { IconContext } from "react-icons"
@@ -12,14 +12,14 @@ function Sidebar() {
         <IconContext.Provider value={{ color: "white" }}> 
             <nav className='nav-menu'>
                 <ul className="nav-menu-items">
-                <li className="header">Tradezi</li>
+                <li className="header">TradEzi</li>
                 {SidebarData.map((item, index) => {
                     return (
                         <li key={index} className={item.cName}>
-                            <Link to={item.path}>
+                            <NavLink to={item.path} activeClassName="active">
                                 {item.icon}
                                 <span>{item.title}</span>
-                            </Link>
+                            </NavLink>
                         </li>
                     )
                 })}
