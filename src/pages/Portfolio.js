@@ -1,9 +1,10 @@
 import React from 'react'
+import Overview from '../components/Overview'
 
 function Portfolio() {
     return (
         <div className="portfolio">
-            <h1>Portfolio</h1>            
+            <Overview />
         </div>
     )
 }
