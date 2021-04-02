@@ -12,7 +12,7 @@ function Sidebar() {
         <IconContext.Provider value={{ color: "red" }}> 
             <nav className='nav-menu'>
                 <ul className="nav-menu-items">
-                    <li className="header">TradeZi</li>
+                    <li className="header">TRADEZI</li>
                 {SidebarData.map((item, index) => {
                     return (
                         <li key={index} className={item.cName}>
