@@ -7,6 +7,10 @@ function Login(props) {
 
     return (
         <section className="login">
+            <div className="landingPage">
+                <h1>TRADEZI</h1>
+                <p>An easier way to get into trading!</p>
+            </div>
             <div className="loginContainer">
                 <label>UserName</label>
                 <input 
