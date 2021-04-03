@@ -5,7 +5,7 @@
     justify-content: center;
     position: fixed;
     /*background: #333867;*/
-    background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);
+    /*background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);*/
     /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
 }
 
@@ -63,12 +63,14 @@
     background: #16183a;
     border-radius: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);*/
 }
 
 .active{
     background: #16183a;
     border-radius: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);*/
 }
 
 .active span, .active svg{
@@ -78,5 +80,21 @@
 
 span{
     margin-left: 10%;
+}
+
+button{
+    background: #16183a;
+    width: 95%;
+    border: none;
+    border-radius: 16px;
+    padding: 5%;
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+button:hover{
+    background: #16183a;
+    
 }
 

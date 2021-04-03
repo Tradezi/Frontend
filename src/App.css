@@ -2,16 +2,19 @@
 
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin-left: 0;
     padding: 0;
     font-family: Lato, sans-serif;
     color: #fff;
     font-size: 16px;
 }
 
-.portfolio, .stocks{
-    /*background: #333867;*/
+body{
     background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);
+    
+}
+
+.portfolio, .stocks{
     display: flex;
     flex-direction: row;
     height: 100vh;

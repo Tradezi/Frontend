@@ -6,7 +6,7 @@ import { SidebarData } from "./SidebarData"
 import "../styles/Sidebar.css" 
 import { IconContext } from "react-icons"
 
-function Sidebar() {
+function Sidebar({ handleLogout }) {
     return (
         <>
         <IconContext.Provider value={{ color: "red" }}> 
@@ -23,6 +23,9 @@ function Sidebar() {
                         </li>
                     )
                 })}
+                <li className="nav-text">
+                    <button onClick={handleLogout}>Logout</button>
+                </li>
                 </ul>
             </nav>
         </IconContext.Provider> 
