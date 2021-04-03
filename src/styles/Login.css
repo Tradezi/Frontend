@@ -15,6 +15,10 @@
   min-height: 100vh;
   padding: 0 20px;
   background: none; 
+  /*background-image: url('../images/AdobeStock_295042621.jpeg');*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
