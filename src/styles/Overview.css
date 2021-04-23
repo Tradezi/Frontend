@@ -16,7 +16,7 @@ h1{
 .cards{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-left: 10%;
     margin-top: 5%;
     background: #252952; 

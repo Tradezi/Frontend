@@ -15,7 +15,7 @@ function Login(props) {
                 <label>UserName</label>
                 <input 
                     type="text" 
-                    autofocus 
+                    autoFocus 
                     required
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)}

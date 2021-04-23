@@ -10,8 +10,8 @@
 }
 
 body{
-    background-image: url('./images/AdobeStock_295042621.jpeg');
     background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);
+    backdrop-filter: blur(10px);
     
 }
 
