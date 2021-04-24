@@ -1,10 +1,17 @@
 .candle-stick{
-    /*background: #333867;*/
-    background: white;
-    width: 75%;
+    background: #333867;
+    /*background: white;*/
+    width: 85%;
     height: 50%;
     margin-bottom: 5%; 
     margin-top: 2%; 
     border-radius: 1rem;
     padding: 1%;
+    /*color: white;*/
+}
+
+.apexcharts-text tspan{
+    color: white;
+    fill: white;
+    font-family: Lato;
 }
