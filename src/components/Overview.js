@@ -7,7 +7,6 @@ import "../styles/Overview.css"
 function Overview() {
     return(
         <div className="overview">
-            <h1>Portfolio</h1>
             <div className="cards">
                 <Card>
                   <Card.Body>
