@@ -23,10 +23,8 @@ function Sidebar({ handleLogout }) {
                         </li>
                     )
                 })}
-                <li className="nav-text">
-                    <button onClick={handleLogout}>Logout</button>
-                </li>
                 </ul>
+                <button className="logout" onClick={handleLogout}>Logout</button>
             </nav>
         </IconContext.Provider> 
         </>

@@ -1,0 +1,10 @@
+.candle-stick{
+    /*background: #333867;*/
+    background: white;
+    width: 75%;
+    height: 50%;
+    margin-bottom: 5%; 
+    margin-top: 2%; 
+    border-radius: 1rem;
+    padding: 1%;
+}
