@@ -20,10 +20,6 @@
     transition: all .3s ease;
 }
 
-.stock .hidden{
-    display: none;
-}
-
 .stock-details{
     display: flex;
     flex-direction: row;
@@ -43,7 +39,7 @@
 }
 
 .stock-details button{
-    width: 8rem;
+    width: 6rem;
     border: none;
     outline: none;
     padding: 1%;

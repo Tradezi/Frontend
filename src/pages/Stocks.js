@@ -28,6 +28,13 @@ function Stocks() {
     return (
         <div className="stocks">
             <Header title="Stocks" />            
+            <div className="title-bar">
+                <p>Symbol</p>
+                <p>Stock Name</p>
+                <p>Current Price</p>
+                <p>Action</p>
+                <p>Expand</p>
+            </div>
             <div className="stocks-container">
                 <Stock stockData={stockData} />
                 <Stock stockData={stockData} />

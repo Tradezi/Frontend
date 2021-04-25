@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import CandleStick from './CandleStick';
 
 import "../styles/Stock.css";
@@ -11,24 +11,30 @@ function Stock( {stockData} ) {
     const dropDown = () => {
         console.log("Dropdown"); 
         setDropState(true);
+        executeScroll();
     }
 
     const pullUp = () => {
         setDropState(false);
+        executeScroll();
     }
 
     useEffect(() => {
         console.log("Stock component");
         console.log("Component prop", {stockData});
-    }, [])
+    }, []);
+
+    // Scrolling the component into view
+    const myRef = useRef(null);
+    const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     return (
-        <div className="stock ">
+        <div className="stock " ref={myRef}>
             <div className="stock-details">
                 <p>AAPL</p>
                 <p>Apple</p>
                 <p>70.79</p>
-                <button>Buy or Sell</button>
+                <button>Buy/Sell</button>
                 { dropState ? (
                     <FaIcons.FaChevronUp className="drop-down" onClick={pullUp}/>
                 ) : (
