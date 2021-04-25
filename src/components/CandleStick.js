@@ -9,6 +9,7 @@ function CandleStick( {stockData} ) {
     const rawData = data.stockData;
     console.log("Raw data", rawData[0]);
 
+    // Function to parse the JSON stock data into required OHLC format
     const convertToOHLC = (data) => {
         const converted = []
         var myDate = data.date;
@@ -29,6 +30,7 @@ function CandleStick( {stockData} ) {
         return converted;
     }
 
+    // Converts all the data into OHLC formata
     const ohlcData = [];
     for(let i = 0; i < rawData.length; i++){
         var temp = convertToOHLC(rawData[i]);
@@ -36,17 +38,11 @@ function CandleStick( {stockData} ) {
         console.log(temp);
     }
 
-    //convertToOHLC(rawData[0]);
-
-
     const state = {
 
             series: [{
               // Data has to be in OHLC format
                 data: ohlcData
-                //data: [
-                    //[1538856000000, [70.44999694824219, 71.13500213623047, 69.98750305175781, 70.7925033569336]]
-                //]
               //data: [{
                   //x: new Date(1538778600000),
                   //y: [6629.81, 6650.5, 6623.04, 6633.33]

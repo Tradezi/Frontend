@@ -8,10 +8,9 @@ function Stocks() {
 
     const [stockData, setStockData] = useState([]);
     // Trial API call
-    function getData(){
+    function getHistory(){
         console.log("LOL");
-        //getData();
-        return API.get(routes.stocks)
+        return API.get(routes.stocks_history)
             .then(response => {
                 console.log("API call", response);
                 setStockData(response.data);
@@ -21,7 +20,7 @@ function Stocks() {
             })
     }
     useEffect(() => {
-        getData();
+        getHistory();
         console.log("All stocks component");
         console.log("Use state", stockData);
     }, [])
@@ -29,7 +28,15 @@ function Stocks() {
     return (
         <div className="stocks">
             <Header title="Stocks" />            
-            <Stock stockData={stockData} />
+            <div className="stocks-container">
+                <Stock stockData={stockData} />
+                <Stock stockData={stockData} />
+                <Stock stockData={stockData} />
+                <Stock stockData={stockData} />
+                <Stock stockData={stockData} />
+                <Stock stockData={stockData} />
+                <Stock stockData={stockData} />
+            </div>
         </div>
     )
 }

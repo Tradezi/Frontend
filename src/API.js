@@ -19,7 +19,8 @@ var routes = {
     sign_in: "/user/sign_in",
     sign_up: "/user/sign_up",
     user_details: "/user/details",
-    stocks: "/stocks/history?symbol=aapl&years=1"
+    stocks: "/stocks/all?page=1",
+    stocks_history: "/stocks/history?symbol=aapl&years=1"
 };
 
 export {apivar as API, routes}
