@@ -1,13 +1,17 @@
 .candle-stick{
+    height: 0;
+    transition: height 3s ease-out;
+}
+
+.candle-stick{
     background: #16183a;
     /*background: white;*/
     width: 85%;
     height: 50%;
-    margin-bottom: 5%; 
+    margin-bottom: 2%; 
     margin-top: 2%; 
     border-radius: 1rem;
-    padding: 1%;
-    /*color: white;*/
+    transition: height 3s ease-in;
 }
 
 .apexcharts-text tspan{

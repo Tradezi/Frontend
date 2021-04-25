@@ -32,10 +32,10 @@ function App() {
             email: "lol@gmail.com",
             password: "lollol"
         }
-        axios.post("https://1847a123a2b6.ngrok.io/api/user/sign_in", data)
-        //axios.post("https://tradezi-backend.herokuapp.com/api/user/sign_in", data)
+        //axios.post("https://1847a123a2b6.ngrok.io/api/user/sign_in", data)
+        //axios.post("http://backend.tradezi.co.in/api/user/sign_in", data)
+        API.post(routes.sign_in, data)
             .then(res =>{
-                console.log("LOLOLOL");
                 console.log(res);
                 if(res.status == 200){
                     setUser(true);
@@ -51,8 +51,9 @@ function App() {
             email: "lol@gmail.com",
             password : "lollol"
         };
-        axios.post("https://1847a123a2b6.ngrok.io/api/user/sign_up", data)
-        //axios.post("https://tradezi-backend.herokuapp.com/api/user/sign_up", data)
+        //axios.post("https://1847a123a2b6.ngrok.io/api/user/sign_up", data)
+        //axios.post("http://backend.tradezi.co.in/api/user/sign_up", data)
+        API.post(routes.sign_up, data)
             .then(res =>{
                 console.log("LOLOLOL");
                 console.log(res);

@@ -7,10 +7,12 @@
     font-family: Lato, sans-serif;
     color: #fff;
     font-size: 16px;
+    letter-spacing: 1px;
 }
 
 body{
-    background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);
+    /*background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);*/
+    background: linear-gradient(#16183A, #333867);
     backdrop-filter: blur(10px);
     
 }

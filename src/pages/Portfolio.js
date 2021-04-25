@@ -6,22 +6,6 @@ import axios from "axios";
 
 function Portfolio() {
 
-    // Trial API call
-    function getData(){
-        console.log("LOL");
-        //getData();
-        API.get(routes.user_details)
-            .then(response => {
-                console.log(response);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
-    useEffect(() => {
-        console.log("Hello");
-        getData();
-    }, [])
 
     return (
         <div className="portfolio">
