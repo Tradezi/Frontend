@@ -6,6 +6,23 @@ import axios from "axios";
 
 function Portfolio() {
 
+    const [user, setUser] = useState();
+    function getUserDetails(){
+        return API.get(routes.user_details)
+            .then(response => {
+                console.log("User details", response);
+                setUser(response);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+    useEffect(() => {
+        getUserDetails();
+        console.log("Portfolio page");
+        console.log("User", user);
+    }, [])
 
     return (
         <div className="portfolio">

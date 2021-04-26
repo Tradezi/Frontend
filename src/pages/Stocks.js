@@ -7,21 +7,20 @@ import axios from "axios";
 function Stocks() {
 
     const [stockData, setStockData] = useState([]);
-    // Trial API call
-    function getHistory(){
+    function getStocks(){
         console.log("LOL");
-        return API.get(routes.stocks_history)
+        return API.get(routes.stocks)
             .then(response => {
                 console.log("API call", response);
-                setStockData(response.data);
+                setStockData(response);
             })
             .catch(error => {
                 console.log(error);
             })
     }
     useEffect(() => {
-        getHistory();
-        console.log("All stocks component");
+        getStocks();
+        console.log("Stocks page");
         console.log("Use state", stockData);
     }, [])
 
@@ -36,12 +35,6 @@ function Stocks() {
                 <p>Expand</p>
             </div>
             <div className="stocks-container">
-                <Stock stockData={stockData} />
-                <Stock stockData={stockData} />
-                <Stock stockData={stockData} />
-                <Stock stockData={stockData} />
-                <Stock stockData={stockData} />
-                <Stock stockData={stockData} />
                 <Stock stockData={stockData} />
             </div>
         </div>

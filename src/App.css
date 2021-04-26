@@ -32,6 +32,12 @@ body:before{
     background: linear-gradient(#16183A, #333867);
 }
 
+button:hover{
+    /*transform: scale(1.05);*/
+    border: 4px solid ;
+    background-color: white;
+}
+
 .portfolio, .stocks{
     display: flex;
     flex-direction: column;
