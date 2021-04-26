@@ -8,11 +8,11 @@ function Stocks() {
 
     const [stockData, setStockData] = useState([]);
     function getStocks(){
-        console.log("LOL");
+        //console.log("LOL");
         return API.get(routes.stocks)
             .then(response => {
-                console.log("API call", response);
-                setStockData(response);
+                console.log("Get stocks API call", response.data);
+                setStockData(response.data);
             })
             .catch(error => {
                 console.log(error);
@@ -27,15 +27,12 @@ function Stocks() {
     return (
         <div className="stocks">
             <Header title="Stocks" />            
-            <div className="title-bar">
-                <p>Symbol</p>
-                <p>Stock Name</p>
-                <p>Current Price</p>
-                <p>Action</p>
-                <p>Expand</p>
-            </div>
             <div className="stocks-container">
-                <Stock stockData={stockData} />
+                {
+                    stockData.map((value, index) => {
+                        return <Stock key={index} stockData={value} />
+                    })
+                }
             </div>
         </div>
     )
