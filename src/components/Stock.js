@@ -15,6 +15,7 @@ function Stock( {stockData} ) {
     const [dropState, setDropState] = useState(false);
     const dropDown = () => {
         console.log("Dropdown"); 
+        getHistory();
         setDropState(true);
         executeScroll();
     }
@@ -38,7 +39,6 @@ function Stock( {stockData} ) {
             })
     }
     useEffect(() => {
-        getHistory();
         console.log("Stock component", stockData);
         console.log("Use state", stockHistory);
     }, [])
@@ -64,7 +64,7 @@ function Stock( {stockData} ) {
                     ) }
                 </div>
             </div>
-            { dropState && <CandleStick stockHistory={stockHistory}/> }
+            { dropState && <CandleStick symbol={symbol} stockHistory={stockHistory}/> }
             
             
         </div>

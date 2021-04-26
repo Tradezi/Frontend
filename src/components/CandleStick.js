@@ -3,9 +3,11 @@ import Chart from 'react-apexcharts';
 
 import "../styles/CandleStick.css";
 
-function CandleStick( {stockHistory} ) {
+function CandleStick( {symbol, stockHistory} ) {
 
     const data = {stockHistory};
+    const candleSymbol = {symbol};
+    console.log("Candle", candleSymbol);
     console.log("candle data", data);
     const rawData = data.stockHistory;
     console.log("Raw data", rawData[0]);
@@ -16,7 +18,7 @@ function CandleStick( {stockHistory} ) {
         var myDate = data.date;
         myDate = myDate.split("-");
         var newDate = new Date(myDate[2], myDate[0], myDate[1]);
-        console.log(newDate);
+        //console.log(newDate);
         converted.push(newDate.getTime())
         const ohlc = []
 
@@ -26,7 +28,7 @@ function CandleStick( {stockHistory} ) {
         ohlc.push(data.close.toFixed(2));
         
         converted.push(ohlc)
-        console.log("Converted to OHLC", converted)
+        //console.log("Converted to OHLC", converted)
         
         return converted;
     }
@@ -36,7 +38,7 @@ function CandleStick( {stockHistory} ) {
     for(let i = 0; i < rawData.length; i++){
         var temp = convertToOHLC(rawData[i]);
         ohlcData.push(temp);
-        console.log(temp);
+        //console.log(temp);
     }
 
     const state = {
@@ -72,7 +74,7 @@ function CandleStick( {stockHistory} ) {
                 height: 350
               },
               title: {
-                text: '',
+                text: candleSymbol.symbol,
                   align: 'left',
                   style: {
                       color: "white",
