@@ -27,6 +27,11 @@ function Stocks() {
     return (
         <div className="stocks">
             <Header title="Stocks" />            
+            <div className="title-bar">
+                <p>Symbol</p>
+                <p>Company</p>
+                <p>Current Price</p>
+            </div>
             <div className="stocks-container">
                 {
                     stockData.map((value, index) => {

@@ -1,5 +1,7 @@
 h1{
     display: block;
+    /*position: fixed;*/
+    z-index: 2;
     margin-left: 25%;
     margin-top: 5%;
     font-size: 2rem;
