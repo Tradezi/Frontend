@@ -19,9 +19,9 @@ function Portfolio() {
     }
 
     useEffect(() => {
-        //getUserDetails();
+        getUserDetails();
         console.log("Portfolio page");
-        //console.log("User", user);
+        console.log("User", user);
     }, [])
 
     return (

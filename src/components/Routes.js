@@ -11,6 +11,7 @@ function Routes({ handleLogout }) {
     <Router>
         <Sidebar handleLogout={handleLogout}/>
         <Switch>
+            <Route path="/"  exact component={Portfolio} />
             <Route path="/portfolio"  exact component={Portfolio} />
             <Route path="/stocks" component={Stocks} />
         </Switch>
