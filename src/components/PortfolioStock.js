@@ -30,15 +30,19 @@ function PortfolioStock( {stockData} ) {
         console.log("Dropdown"); 
         getHistory();
         setDropState(true);
-        //executeScroll();
+        executeScroll();
     }
     const pullUp = () => {
         setDropState(false);
-        //executeScroll();
+        executeScroll();
     }
 
+    // Scrolling the component into view
+    const myRef = useRef(null);
+    const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
     return(
-        <div className="portfolio-stock">
+        <div className="portfolio-stock" ref={myRef}>
             <div className="portfolio-stock-details">
                 <div className="portfolio-text">
                     <p>{symbol}</p>
