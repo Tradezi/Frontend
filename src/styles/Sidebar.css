@@ -57,12 +57,14 @@
     align-items: center;
     padding: 5%;
     outline: none;
+    border: 2px solid #603bbb;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .nav-text a:hover,
 .active{
     /*background: #16183a;*/
-    border: none;
     outline: none;
     /*padding: 1%;*/
     color: #fff;
@@ -70,6 +72,11 @@
     letter-spacing: 1px;
     background: #603bbb;
     cursor: pointer;
+    transition: 0.3s ease-in;
+
+    z-index: 2;
+    background-color: #603bbb;
+    border: 2px solid #603bbb;
     border-radius: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -88,21 +95,22 @@ span{
 
 .nav-menu button{
     width: 95%;
-    border: none;
+    /*border: none;*/
     border-radius: 16px;
     padding: 5%;
     cursor: pointer;
 
-    border: none;
+    /*border: none;*/
     outline: none;
     /*padding: 1%;*/
     color: #fff;
     font-size: 16px;
     letter-spacing: 1px;
-    background: #603bbb;
+    /*background: #603bbb;*/
+    background: none;
     cursor: pointer;
-    border-radius: 1rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*border-radius: 1rem;*/
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
     /*Glass background*/
     /*background: rgba( 255, 255, 255, 0.05 );*/
     /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
@@ -112,17 +120,46 @@ span{
     /*border: 1px solid rgba( 255, 255, 255, 0.18 );*/
 }
 
-.nav-menu button:hover{
-    background: #16183a;
-    transition: 3s ease-in;
+button:hover{
+    /*background: #16183a;*/
+    z-index: 2;
+    background-color: #603bbb;
+    transition: .3s ease-in;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
 }
 
-.nav-menu .logout{
-    bottom: 0;    
-    margin-top: 70%;
+.sidebar-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /*bottom: 0;    */
+    margin-top: 25%;
     margin-left: 15%;
-    padding: 5%;
+    /*background-color: red;*/
+    width: 100%;
+}
+
+.sidebar-footer p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: center;*/
+    /*bottom: 0;    */
+    /*margin-top: 70%;*/
+    margin-bottom: 5%;
+    /*margin-left: 15%;*/
+    /*padding: 5%;*/
     width: 95%;
 }
 
+button.btn-footer:hover{
+    background: #603bbb;
+}

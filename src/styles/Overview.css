@@ -1,8 +1,8 @@
 .overview{
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
     /*width: 75%;*/
-    width: 50%;
+    width: 60%;
     margin-left: 25%;
     margin-right: 25%;
     /*margin-top: 10%;*/
@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: center;
     background: #16183a;
-    width: 12rem;
+    width: 10rem;
     padding: 12%;
 
     /*Glass background*/
@@ -40,10 +40,12 @@
 }
 
 .card-title{
-    font-size: 1.25rem;
+    font-size: 1rem;
+    
 }
 
 .card-text{
     /*margin-top: 5%;*/
-    font-size: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
