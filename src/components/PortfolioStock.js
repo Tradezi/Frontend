@@ -47,9 +47,9 @@ function PortfolioStock( {stockData} ) {
                 <div className="portfolio-text">
                     <p>{symbol}</p>
                     <p>{company}</p>
+                    <p>$ {price}</p>
                 </div>
                 <div className="portfolio-numbers">
-                    <p>$ {price}</p>
                     <p>{number}</p>
                     <p>$ {profit}</p>
                 </div>

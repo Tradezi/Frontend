@@ -71,7 +71,7 @@ function CandleStick( {symbol, stockHistory} ) {
             options: {
               chart: {
                 type: 'candlestick',
-                height: 350
+                height: 300
               },
               title: {
                 text: candleSymbol.symbol,

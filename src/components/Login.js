@@ -12,7 +12,7 @@ function Login(props) {
                 <p>An easier way to get into trading!</p>
             </div>
             <div className="loginContainer">
-                <label>UserName</label>
+                <label>Username</label>
                 <input 
                     type="text" 
                     autoFocus 

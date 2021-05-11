@@ -10,19 +10,11 @@
     letter-spacing: 1px;
 }
 
-/*body:before{*/
-	/*content:'';*/
-	/*position: fixed;*/
-	/*top: 0;*/
-	/*bottom: 0;*/
-	/*width: 100%;*/
-	/*z-index: -1;*/
-    /*background: linear-gradient(#16183A, #333867);*/
-/*}*/
-
 body{
     /*background: linear-gradient(122.1deg, #333867 11.91%, #16183A 100%);*/
-    background: linear-gradient(to right, #16183A, #333867);
+    /*background: linear-gradient(to right, #16183A, #333867);*/
+    background: #16183A;
+    /*background: #333867;*/
     background-size: 100%;
     /*background-repeat: no-repeat;*/
     /*background: #333867;*/
@@ -30,12 +22,13 @@ body{
     height: auto;
     min-height: 100%;
     overflow: auto;
+    margin-left: 10%;
     
 }
 
 
 button{
-    border: 2px solid #603bbb;
+    /*border: 2px solid #603bbb;*/
     border-radius: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
