@@ -64,6 +64,7 @@ function App() {
     };
 
     const handleLogout = () => {
+        setUser(false);
     };
 
     const authListener = () => {
@@ -80,30 +81,30 @@ function App() {
 
 
 
-  //return (
-    //<>
-      //{user ? (
-        //<Routes handleLogout={handleLogout}/>
-      //) : (
-        //<Login 
-          //email={email}
-          //setEmail={setEmail}
-          //password={password}
-          //setPassword={setPassword}
-          //handleLogin={handleLogin}
-          //handleSignup={handleSignup}
-          //hasAccount={hasAccount}
-          //setHasAccount={setHasAccount}
-          //emailError={emailError}
-          //passwordError={passwordError}
-        ///>
-      //)}
-    //</>
-  //);
+  return (
+    <>
+      {user ? (
+        <Routes handleLogout={handleLogout}/>
+      ) : (
+        <Login 
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          handleLogin={handleLogin}
+          handleSignup={handleSignup}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          emailError={emailError}
+          passwordError={passwordError}
+        />
+      )}
+    </>
+  );
 
-    return (
-        <Routes />
-    );
+    //return (
+        //<Routes />
+    //);
 }
 
 export default App;

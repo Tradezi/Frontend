@@ -1,5 +1,6 @@
 h1{
     display: block;
+    position: sticky;
     /*position: fixed;*/
     z-index: 2;
     margin-left: 25%;

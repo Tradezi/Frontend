@@ -54,15 +54,18 @@ function PortfolioStock( {stockData} ) {
             <div className="portfolio-stock-details">
                 <div className="portfolio-text">
                     <p>{symbol}</p>
+                    |
                     <p>{company}</p>
+                    |
                     <p>$ {price}</p>
+                    |
                 </div>
                 <div className="portfolio-numbers">
                     <p>{number}</p>
                     <p>$ {profit}</p>
                 </div>
                 <div className="portfolio-control">
-                    <button onClick={popUp}>Buy</button>
+                    <button onClick={popUp}>Buy/Sell</button>
                     { popUpState && <TransactionPopUp symbol={symbol} company={company} price={price} setPopUpState={setPopUpState}/> }
                     { dropState ? (
                         <FaIcons.FaChevronUp className="drop-down" onClick={pullUp}/>

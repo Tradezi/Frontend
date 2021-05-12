@@ -61,6 +61,7 @@ button:hover{
     justify-content: space-between;
     padding-bottom: 10%;
     margin-top: 2%;
+    /*border-bottom: 2px solid #333867;*/
 }
 
 .title-bar{

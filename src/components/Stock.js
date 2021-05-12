@@ -64,7 +64,7 @@ function Stock( {stockData} ) {
                 </div>
                 <div className="stock-control">
                     <button onClick={popUp}>Buy</button>
-                    { popUpState && <TransactionPopUp symbol={symbol} company={company} price={price}/> }
+                    { popUpState && <TransactionPopUp symbol={symbol} company={company} price={price} setPopUpState={setPopUpState}/> }
                     { dropState ? (
                         <FaIcons.FaChevronUp className="drop-down" onClick={pullUp}/>
                     ) : (
