@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import CandleStick from './CandleStick';
 import {API, routes} from "../API";
+import TransactionPopUp from './TransactionPopUp'
 
 import "../styles/PortfolioStock.css";
 import * as FaIcons from "react-icons/fa"
@@ -37,10 +38,17 @@ function PortfolioStock( {stockData} ) {
         executeScroll();
     }
 
+    // Pop up for making a transaction
+    const [popUpState, setPopUpState] = useState(false);
+    const popUp = () => {
+        setPopUpState(true);
+    }
+
     // Scrolling the component into view
     const myRef = useRef(null);
     const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+    
     return(
         <div className="portfolio-stock" ref={myRef}>
             <div className="portfolio-stock-details">
@@ -54,7 +62,8 @@ function PortfolioStock( {stockData} ) {
                     <p>$ {profit}</p>
                 </div>
                 <div className="portfolio-control">
-                    <button>Buy/Sell</button>
+                    <button onClick={popUp}>Buy</button>
+                    { popUpState && <TransactionPopUp symbol={symbol} company={company} price={price} setPopUpState={setPopUpState}/> }
                     { dropState ? (
                         <FaIcons.FaChevronUp className="drop-down" onClick={pullUp}/>
                     ) : (
