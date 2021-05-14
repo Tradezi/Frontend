@@ -19,20 +19,32 @@ function Stock( {stockData} ) {
         console.log("Dropdown"); 
         getHistory();
         setDropState(true);
-        executeScroll();
+        //executeScroll();
     }
     const pullUp = () => {
         setDropState(false);
-        executeScroll();
+        //executeScroll();
     }
 
     // Pop up for making a transaction
     const [popUpState, setPopUpState] = useState(false);
     const popUp = () => {
         console.log("POPUP!");
+        getCurrentPrice();
         setPopUpState(true);
     }
 
+    const [currentPrice, setCurrentPrice] = useState(0);
+    function getCurrentPrice(){
+        return API.get(routes.current + symbol)
+            .then(response => {
+                console.log("current", response.data.price);
+                setCurrentPrice(parseFloat(response.data.price).toFixed(2))
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
     //console.log(routes.stocks_history + "symbol=" + symbol + "&years=1");
 
@@ -49,6 +61,7 @@ function Stock( {stockData} ) {
     }
     useEffect(() => {
     }, [])
+    //setInterval(getCurrentPrice, 30000);
 
     // Scrolling the component into view
     const myRef = useRef(null);

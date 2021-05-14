@@ -43,16 +43,17 @@ function PortfolioStock( {stockData} ) {
         console.log("Dropdown"); 
         getHistory();
         setDropState(true);
-        executeScroll();
+        //executeScroll();
     }
     const pullUp = () => {
         setDropState(false);
-        executeScroll();
+        //executeScroll();
     }
 
     // Pop up for making a transaction
     const [popUpState, setPopUpState] = useState(false);
     const popUp = () => {
+        getCurrentPrice();
         setPopUpState(true);
     }
 
@@ -63,6 +64,8 @@ function PortfolioStock( {stockData} ) {
     useEffect(() => {
         getCurrentPrice();
     }, [])
+
+    //setInterval(getCurrentPrice, 30000);
     
     return(
         <div className="portfolio-stock" ref={myRef}>
