@@ -51,6 +51,7 @@
 
 .stock-numbers input{
     width: 25%;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .buttons{
