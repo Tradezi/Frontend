@@ -35,7 +35,6 @@ function Portfolio() {
             })
     }
 
-
     useEffect(() => {
         console.log("Portfolio mounted");
         getUserFunds();

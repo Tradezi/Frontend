@@ -26,6 +26,18 @@ function PortfolioStock( {stockData} ) {
             })
     }
 
+    const [currentPrice, setCurrentPrice] = useState(0);
+    function getCurrentPrice(){
+        return API.get(routes.current + symbol)
+            .then(response => {
+                console.log("current", response.data.price);
+                setCurrentPrice(parseFloat(response.data.price).toFixed(2))
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     const [dropState, setDropState] = useState(false);
     const dropDown = () => {
         console.log("Dropdown"); 
@@ -48,17 +60,17 @@ function PortfolioStock( {stockData} ) {
     const myRef = useRef(null);
     const executeScroll = () => myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+    useEffect(() => {
+        getCurrentPrice();
+    }, [])
     
     return(
         <div className="portfolio-stock" ref={myRef}>
             <div className="portfolio-stock-details">
                 <div className="portfolio-text">
                     <p>{symbol}</p>
-                    |
                     <p>{company}</p>
-                    |
-                    <p>$ {price}</p>
-                    |
+                    <p>$ {currentPrice}</p>
                 </div>
                 <div className="portfolio-numbers">
                     <p>{number}</p>

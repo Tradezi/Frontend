@@ -20,8 +20,8 @@ var routes = {
     sign_up: "/user/sign_up",
     user_details: "/user/details",
     user_stock_details: "user/stock_details",
-    stocks: "/stocks/all?page=1",
-    current: "stocks/current?symbol=",
+    stocks: "/stocks/all?page=",
+    current: "/stocks/current?symbol=",
     //stocks_history: "/stocks/history?symbol=aapl&years=1"
     stocks_history: "/stocks/history?",
     transaction: "/stocks/transaction" 

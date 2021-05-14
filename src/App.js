@@ -28,9 +28,13 @@ function App() {
 
     const handleLogin = () => {
         //clearErrors();
+        //var data = {
+            //email: "lol@gmail.com",
+            //password: "lollol"
+        //}
         var data = {
-            email: "lol@gmail.com",
-            password: "lollol"
+            email: email,
+            password: password
         }
         //axios.post("https://1847a123a2b6.ngrok.io/api/user/sign_in", data)
         //axios.post("http://backend.tradezi.co.in/api/user/sign_in", data)
@@ -45,18 +49,22 @@ function App() {
 
     const handleSignup = () => {
         //clearErrors();
+        //var data = {
+            //username: "lol",
+            //name: "lol lol",
+            //email: "lol@gmail.com",
+            //password : "lollol"
+        //};
         var data = {
-            username: "lol",
+            username: email,
             name: "lol lol",
-            email: "lol@gmail.com",
-            password : "lollol"
+            email: email,
+            password : password
         };
         //axios.post("https://1847a123a2b6.ngrok.io/api/user/sign_up", data)
         //axios.post("http://backend.tradezi.co.in/api/user/sign_up", data)
         API.post(routes.sign_up, data)
             .then(res =>{
-                console.log("LOLOLOL");
-                console.log(res);
                 if(res.status == 200){
                     setUser(true);
                 }
