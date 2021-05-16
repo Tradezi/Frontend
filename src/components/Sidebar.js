@@ -49,7 +49,7 @@ function Sidebar({ handleLogout }) {
                 })}
                 </ul>
                 <div className="sidebar-footer">
-                    <p>Welcome {userName}</p>
+                    <p>Welcome! {userName}</p>
                     <button className="btn-footer" ><FaIcons.FaCog /><span>Settings</span></button>
                     <button className="btn-footer" onClick={handleLogout}><FaIcons.FaUser /><span>Logout</span></button>
                 </div>
